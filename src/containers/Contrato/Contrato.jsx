@@ -1,12 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import Formulario from "../../components/formulario/Formulario";
 
-
-class Contrato extends Component {
-  componentDidMount() {}
-
-  render() {
-    return <div>Contrato</div>;
-  }
-}
+const Contrato = (
+  { formData: { contrato, provincias, contratistas } },
+  ...props
+) => {
+  return (
+    <div className="contrato">
+      <Formulario provincias={provincias} contratistas={contratistas} />
+    </div>
+  );
+};
 
 export default Contrato;
